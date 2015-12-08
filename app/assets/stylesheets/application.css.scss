@@ -41,11 +41,13 @@
  	background: white;
  	#logo{
  		float: left;
- 		p {
+ 		a {
  			text-transform: uppercase;
  			font-weight: 700;
  			letter-spacing: -1px;
  			font-size: 1.2rem;
+ 			text-decoration: none;
+ 			color: #b20000;
  		}
  	}
  	#buttons{
@@ -73,7 +75,7 @@
  		.title{
  			margin: 0;
  			a{
- 				color: #cc0000;
+ 				color: #b20000;
  				text-decoration: none;
  				font-weight: 100;
  				font-size: 1.25rem;
@@ -94,7 +96,7 @@
  	h1 {
  		font-weight: 100;
  		font-size: 2em;
- 		color: #cc0000;
+ 		color: #b20000;
  		margin-top: 0;
  	}
  	p {

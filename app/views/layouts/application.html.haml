@@ -12,9 +12,14 @@
     %header.main_header.clearfix
       .wrapper
         #logo 
-          %p Awesome discussion board By Manmeet
+          %p= link_to "Awesome discussion board By Manmeet", root_path
         #buttons
-          = link_to "New post", new_post_path
+          - if user_signed_in?
+            = link_to "New post", new_post_path
+          - else
+            = link_to "Sign up", new_user_registration_path
+            = link_to "Sign In", new_user_session_path
+
     .wrapper
       %p.notice= notice
       %p.alert= alert
