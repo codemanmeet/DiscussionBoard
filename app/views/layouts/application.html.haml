@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %title Awesome discussion board
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    %link{ rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Lato:400,700,300", type: "text/css"}
+    %link{ rel: "stylesheet", href: "http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"}
+
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %header.main_header.clearfix
+      .wrapper
+        #logo 
+          %p Awesome discussion board By Manmeet
+        #buttons
+          = link_to "New post", new_post_path
+    .wrapper
+      %p.notice= notice
+      %p.alert= alert
+    .wrapper
+      = yield
