@@ -1,28 +1,16 @@
-== README
+[*Discussion Board!*](http://pinster.herokuapp.com/) - A discussion board to enable people to post their thoughts and receive comments from the community. Users can like/dislike posts as well.
+=========
+Built using Ruby on Rails. The gems/libraries I used are - 
+- Devise (for login purposes)
+- Normalize (for CSS compatibilities across browsers)
+- simple_form (to make HTML form creation using Ruby objects simpler)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Notes -
+1. To order the posts on the home page, the following algorithm was used - 
+- `@post.orderscore = @post.likes - (2*(@post.dislikes)) + (4*(@post.comments.count))`
+- The higher the `orderscore` for a post, the higher up it is shown on the home page.
+2. Users can view posts and comments without login.
+3. Login is compulsory to submit new posts or add comments. Disliking and liking posts also requires login.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+by *Manmeet Singh Saluja*
