@@ -20,9 +20,12 @@
           - else
             = link_to "Sign up", new_user_registration_path
             = link_to "Sign In", new_user_session_path
-
     .wrapper
       %p.notice= notice
       %p.alert= alert
     .wrapper
+      .login-details 
+        - if user_signed_in?
+          Logged in as : 
+          = current_user.email
       = yield
