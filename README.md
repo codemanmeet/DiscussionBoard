@@ -15,6 +15,7 @@ Notes:
   The higher the `orderscore` for a post, the higher up it is shown on the home page.
 * Users can view posts and comments without login.
 * Login is compulsory to submit new posts or add comments. Disliking and liking posts also requires login.
+* Editing and deleting posts also require login.
 
 
 by *Manmeet Singh Saluja*
