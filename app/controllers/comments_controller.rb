@@ -6,6 +6,8 @@ class CommentsController < ApplicationController
     @comment.save
 
     if @comment.save
+      @post.orderscore = @post.likes - (2*(@post.dislikes)) + (4*(@post.comments.count))
+      @post.save
       redirect_to post_path(@post)
     else
       render 'new'
@@ -32,6 +34,8 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = @post.comments.find(params[:id])
     @comment.destroy
+    @post.orderscore = @post.likes - (2*(@post.dislikes)) + (4*(@post.comments.count))
+    @post.save
     redirect_to post_path(@post)
   end
 end

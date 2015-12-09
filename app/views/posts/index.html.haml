@@ -2,8 +2,19 @@
   - @posts.each do |post|
     .post
       %h2.title= link_to post.title, post
+      = link_to "Delete Post", post_path(post), method: :delete, data: { confirm: "Are you sure you wanna delete?" }, class: "button", style: "float: right"
+      = link_to "Edit Post", edit_post_path(post), class: "button", style: "float: right"
       %p.date
         This post was created
         = time_ago_in_words(post.created_at)
         ago by
         = post.user.email
+        .like
+          Likes: 
+          = post.likes
+        .dislike
+          Dislikes:
+          = post.dislikes
+        .comment-in-posts
+          Comments:
+          = post.comments.count

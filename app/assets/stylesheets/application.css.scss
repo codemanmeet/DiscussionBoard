@@ -19,7 +19,6 @@
  	background: #EDEFF0;
  }
 
-
  .wrapper {
  	width: 60%;
  	max-width: 1139px;
@@ -119,6 +118,18 @@
  			margin-top: .25rem;
  			font-size: 0.9rem;
  			color: #B2BAC2;
+ 		}
+ 		.like{
+ 			font-size: 0.9rem;
+ 			color: #00b200;
+ 		}
+ 		.dislike{
+ 			font-size: 0.9rem;
+ 			color: #e5e500;
+ 		}
+ 		.comment-in-posts{
+ 			font-size: 0.9rem;
+ 			color: #6666ff;
  		}
  	}
  }
